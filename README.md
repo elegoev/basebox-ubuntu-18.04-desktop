@@ -79,7 +79,7 @@ For all notable changes see [CHANGELOG](https://github.com/elegoev/basebox-ubunt
 
 ### License
 
-Licensed under The MIT License (MIT) - for the full copyright and license information, please view the [LICENSE](https://github.com/elegoev/basebox-ubuntu-18.04-desktop/blob/master/LICENSE) file.
+Licensed under The MIT License (MIT) - for the full copyright and license information, please view the [LICENSE](https://github.com/elegoev/basebox-ubuntu-18.04-desktop/blob/main/LICENSE) file.
 
 ### Issue Reporting
 
