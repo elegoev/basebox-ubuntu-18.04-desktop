@@ -7,6 +7,8 @@ if (-not (Test-Path env:PACKER_VAGRANTCLOUD_TOKEN)) {
 
   # set vagrant image name
   $IMAGE_NAME = $env:IMAGE_NAME
+  $BOX_DESCRIPTION = $env:BOX_DESCRIPTION
+  $BOX_SHORTDESCRIPTION = $env:BOX_SHORTDESCRIPTION
 
   # show used token
   # Write-Host "token = $env:PACKER_VAGRANTCLOUD_TOKEN"

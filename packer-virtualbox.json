@@ -54,8 +54,8 @@
     {
       "type": "shell-local",
       "environment_vars": ["IMAGE_NAME={{user `image_name`}}",
-                          "BOX_DESCRIPTION={{user `box_description`}}",
-                          "BOX_SHORTDESCRIPTION={{user `box_shortdescription`}}"
+                           "BOX_DESCRIPTION={{user `box_description`}}",
+                           "BOX_SHORTDESCRIPTION={{user `box_shortdescription`}}"
                           ],
       "execute_command": ["powershell.exe", "{{.Vars}} {{.Script}}"],
       "env_var_format": "$env:%s=\"%s\"; ",
