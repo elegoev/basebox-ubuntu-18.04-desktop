@@ -55,6 +55,9 @@ Used base image [elegoev/ubuntu-18.04](https://app.vagrantup.com/elegoev/boxes/u
             vb.customize ["modifyvm", :id, "--groups", "/#{$vb_group_name}" ]
             vb.customize ["modifyvm", :id, "--vram", 256 ]
           end
+  
+          # forwarding ports
+          machine.vm.network "forwarded_port", id: "rdp",  auto_correct: true, protocol: "tcp", guest: 3389, host: 33333, host_ip: "127.0.0.1"
 
         end   
 
