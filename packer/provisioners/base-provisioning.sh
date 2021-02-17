@@ -11,16 +11,16 @@ sudo apt-get -y install `check-language-support -l de`
 # set locale
 sudo update-locale LANG=de_CH.UTF-8
 
-# # install xrdp
+# install xrdp
 sudo apt install xrdp -y
 sudo apt install xorg-video-abi-24 -y
 sudo apt install xserver-xorg-input-all -y
 sudo apt install xorgxrdp -y
 
-# # grant access
+# grant access
 sudo adduser xrdp ssl-cert
 
-# # restart xrdp
+# restart xrdp
 sudo systemctl stop xrdp
 sudo systemctl start xrdp
 
