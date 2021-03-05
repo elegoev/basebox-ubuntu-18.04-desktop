@@ -3,19 +3,47 @@
 application_file_path="/vagrant/installed-application.md"
 
 # install ubuntu desktop
-sudo apt-get install -y --no-install-recommends ubuntu-desktop
+while :
+do
+  sudo apt-get install -y --no-install-recommends ubuntu-desktop
+  retcode=$?
+  if [ $retcode -eq 0 ]; then
+    break
+  fi
+  echo "sleep 5s ..."
+  sleep 5
+done
 
 # install language pack
-sudo apt-get -y install `check-language-support -l de`
+while :
+do
+  sudo apt-get -y install `check-language-support -l de`
+  retcode=$?
+  if [ $retcode -eq 0 ]; then
+    break
+  fi
+  echo "sleep 5s ..."
+  sleep 5
+done
+
 
 # set locale
 sudo update-locale LANG=de_CH.UTF-8
 
 # install xrdp
-sudo apt install xrdp -y
-sudo apt install xorg-video-abi-24 -y
-sudo apt install xserver-xorg-input-all -y
-sudo apt install xorgxrdp -y
+while :
+do
+  sudo apt install xrdp -y
+  sudo apt install xorg-video-abi-24 -y
+  sudo apt install xserver-xorg-input-all -y
+  sudo apt install xorgxrdp -y
+  retcode=$?
+  if [ $retcode -eq 0 ]; then
+    break
+  fi
+  echo "sleep 5s ..."
+  sleep 5
+done
 
 # grant access
 sudo adduser xrdp ssl-cert
